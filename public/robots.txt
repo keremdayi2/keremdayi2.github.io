@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://keremdayi2.github.io/sitemap.xml

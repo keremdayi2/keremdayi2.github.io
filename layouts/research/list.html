@@ -1,0 +1,31 @@
+{{ define "head" }}
+<link rel="stylesheet" href='{{ "css/list.css" | absURL }}'>
+{{ end }}
+
+{{ define "main" }}
+<main id="main" class="archive">
+  <h2>Selected Publications</h2>
+  {{ $pages := where .Data.Pages "Type" "post" }}
+  <ul>
+      {{ range .Pages }}
+      <li>
+        <a class="link" href="{{ .Params.link }}">{{ .Title }}</a> -- <i>{{ .Params.venue }},<time>{{.PublishDate.Format "2006"}}</time></i><br>
+        {{ with .Params.authors }}
+  {{ range $index, $author := . }}
+    {{ if $author.highlight }}
+      <strong>{{ $author.name }}</strong>{{ if lt (add $index 1) (len .) }}, {{ end }}
+    {{ else }}
+      {{ $author.name }}{{ if lt (add $index 1) (len .) }}, {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }} 
+        <p><small><strong>TLDR:</strong> {{ .Params.description }}</small><p><br>
+      </li>
+      {{ end }}
+    </ul>
+  <div class="post-group">
+    <small>* Indicates co-primary authorship.</small>
+
+  </div>
+</main>
+{{ end }}
