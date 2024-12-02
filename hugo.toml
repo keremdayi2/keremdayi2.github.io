@@ -8,7 +8,6 @@ paginate = 5
 rssLimit = 10
 theme = "hugo-texify2"
 
-
 [[menu.main]]
 identifier = "home"
 name = "Home"
@@ -35,11 +34,48 @@ style = "tango"
 
 
 [params]
-numberedSubtitles = true
-toc = true
+title="Arif Kerem Dayı"
 email = "keremdayi@college.harvard.edu"
 name = "Kerem Dayi"
-title="Arif Kerem Dayi"
+description = "Kerem Dayi - Personal Website"
+images = ['images/logo.jpg']
+footnote = """
+<a class=link href=https://github.com/keremdayi2 target=_blank rel=noopener>GitHub</a>,
+<a class=link href=https://scholar.google.com/citations?user=PzQ0aAsAAAAJ&hl=en target=_blank rel=noopener>Google Scholar</a> or
+<a class=link href=mailto:keremdayi@college.harvard.edu>Email</a> |
+<a class=link href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en target=_blank rel=noopener>CC BY-NC-SA 4.0</a>
+"""
+keywords = ["research"]
+customCSS = []
+customJS = []
+dateFormat = "January 2, 2006"
+emphasisWithDots = true
+since = "2024"
+toc = false
+showWordCount = true
+showReadingTime = true
+rootFontSize = "120%"
+math = true
 enableDuckDuckGoSearchBox = false
+numberedSubtitles = false
+
+[params.commentEngine]
+code = """
+"""
+
+[params.buymeacoffee]
+code = """
+"""
+
+[params.sharingbuttons]
+facebook = false
+twitter = false
+email = false
+linkedin = false
+reddit = false
+whatsapp = false
+hackernews = false
+telegram = false
+
 
 
